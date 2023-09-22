@@ -1,21 +1,41 @@
-
+'use client'
+import SkeletonComp from '@/components/SkeletonComp'
 import Image from 'next/legacy/image'
 import Link from 'next/link'
-
+import { useEffect, useState } from 'react'
+import 'react-loading-skeleton/dist/skeleton.css'
 export default function Home() {
+  const[data,setData]=useState([]);
+const[loader,setLoader]=useState(true);
+  const fetchData=async()=>{
+    setLoader(true);
+const res=await fetch(`https://api.nytimes.com/svc/topstories/v2/home.json?api-key=${process.env.NEXT_PUBLIC_Api_KEY}`);
+const data=await res.json();
+setData(data.results);
+setLoader(false);
+
+  }
+  useEffect(()=>{
+fetchData()
+  },[])
   return (
     
    <div className='container'>
+   {(loader)&&<SkeletonComp number={10}/>}
 
-<div className="card"><Link href={""} target='_blank'>
+{(data!=undefined)&& data.map((value,index)=>{
+
+return <div className="card" key={index}><Link href={value.url} target='_blank' >
 <div className="image_container">
-  <Image src="https://static01.nyt.com/images/2023/09/21/multimedia/21murdoch-notebook-01-hfqk/21murdoch-notebook-01-hfqk-threeByTwoSmallAt2X.jpg" alt="a Image" layout='fill'/>
+{value.multimedia!=null&&<Image src={value.multimedia[0].url } alt="a Image" layout='fill'/>}
+
 </div>
 <div className="article">
-
-  <h1>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam, voluptatum.</h1>
+<h1>{value.title}</h1>
 </div></Link>
 </div>
+})}
+
 
 
 

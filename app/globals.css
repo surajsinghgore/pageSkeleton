@@ -36,6 +36,30 @@ a{
 }
 .container .card .article h1{
 text-align: left;
-  font-size: 1.2vw;
+padding-top: 10px;
+font-size: 1.2vw;
   color: rgb(99, 99, 99);
 }
+
+/* skeleton style */
+.container .card1{
+  position: relative;
+  width: 20%;
+  height: 255px;
+  padding-bottom: 1%;
+  overflow: hidden;
+  margin-left: 4%;
+  margin-bottom: 4%;
+  border: 1px solid rgb(214, 214, 214);
+}
+.container .card1 .image_container1{
+  position: relative;
+  width: 100%;
+
+  height: auto;
+  background-color: #dadada;
+
+}
+
+
+
