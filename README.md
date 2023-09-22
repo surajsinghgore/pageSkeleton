@@ -1,9 +1,9 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
-
+API =https://api.nytimes.com/svc/topstories/v2/arts.json?api-key=yourkey
 First, run the development server:
-
+Package =npm i react-loading-skeleton 
 ```bash
 npm run dev
 # or
