@@ -5,8 +5,12 @@ import { Inter } from 'next/font/google'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
+  icons: {
+    icon: "./icon.png",
+  },
   title: 'Page Skeleton Loading',
   description: 'Testing Page Skeleton Loading',
+
 }
 
 export default function RootLayout({ children }) {
