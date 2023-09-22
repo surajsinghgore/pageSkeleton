@@ -19,6 +19,12 @@ https://developer.nytimes.com
 
 
 
+## Screenshots
+
+![App Screenshot](https://res.cloudinary.com/dnxv21hr0/image/upload/v1695393345/Screenshot_17_mwcsfz.png)
+
+![App Screenshot](https://res.cloudinary.com/dnxv21hr0/image/upload/v1695393351/Screenshot_18_vhppms.png)
+
 ## Run Locally
 
 Clone the project
@@ -55,12 +61,6 @@ Start the server
 
 NEXTJS 13 APP ROUTER
 
-
-## Screenshots
-
-![App Screenshot](https://res.cloudinary.com/dnxv21hr0/image/upload/v1695393345/Screenshot_17_mwcsfz.png)
-
-![App Screenshot](https://res.cloudinary.com/dnxv21hr0/image/upload/v1695393351/Screenshot_18_vhppms.png)
 
 ## Environment Variables
 
