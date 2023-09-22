@@ -27,7 +27,7 @@ fetchData()
 
 return <div className="card" key={index}><Link href={value.url} target='_blank' >
 <div className="image_container">
-{value.multimedia!=null&&<Image src={value.multimedia[0].url } alt="a Image" layout='fill'/>}
+{value.multimedia!=null&&<Image src={value.multimedia[0].url } alt="a Image" layout='fill' priority/>}
 
 </div>
 <div className="article">
