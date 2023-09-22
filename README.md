@@ -1,36 +1,72 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
-API =https://api.nytimes.com/svc/topstories/v2/arts.json?api-key=yourkey
-First, run the development server:
-Package =npm i react-loading-skeleton 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+# Page Skeleton NEXTJS
+
+This project allows to wrap all loading elements to provide better user experience
+
+
+## API Reference
+
+#### Data Provided 
+https://developer.nytimes.com
+```http
+  GET https://api.nytimes.com/svc/topstories/v2/arts.json?api-key=yourkey 
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+| Parameter | Type     | Description                |
+| :-------- | :------- | :------------------------- |
+| `api_key` | `string` | **Required**. Your API key |
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+## Run Locally
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Clone the project
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+```bash
+  git clone https://github.com/surajsinghgore/pageSkeleton.git
+```
 
-## Deploy on Vercel
+Go to the project directory
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```bash
+  cd my-project
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Install dependencies
+
+```bash
+  npm install
+```
+
+Start the server
+
+```bash
+  npm run dev
+```
+
+
+## Authors
+
+- [@surajsinghgore](https://www.linkedin.com/in/surajsinghgore/)
+
+
+## Tech Stack
+
+NEXTJS 13 APP ROUTER
+
+
+## Screenshots
+
+![App Screenshot](https://res.cloudinary.com/dnxv21hr0/image/upload/v1695393345/Screenshot_17_mwcsfz.png)
+
+![App Screenshot](https://res.cloudinary.com/dnxv21hr0/image/upload/v1695393351/Screenshot_18_vhppms.png)
+
+## Environment Variables
+
+To run this project, you will need to add the following environment variables to your .env file
+
+`API_KEY`
+
+
+
