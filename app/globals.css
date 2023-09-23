@@ -6,11 +6,11 @@ a{
 
   text-decoration: none;
 }
+
 .container{
 
   width: 100%;
   height: auto;
-  background-color: rgb(223, 223, 223);
   padding-top: 2%;
   display: flex;
   flex-direction: row;
@@ -42,6 +42,7 @@ font-size: 1.2vw;
 }
 
 /* skeleton style */
+
 .container .card1{
   position: relative;
   width: 20%;
@@ -60,7 +61,8 @@ font-size: 1.2vw;
   background-color: #dadada;
 
 }
-
+h6{font-size: 60px;
+background-color: red;}
 /* media query */
 @media only screen and (max-width: 480px) {
   .container{
@@ -117,3 +119,5 @@ font-size: 1.2vw;
   
   }
 }
+
+

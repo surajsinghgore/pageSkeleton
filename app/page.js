@@ -1,33 +1,20 @@
-'use client'
-import SkeletonComp from '@/components/SkeletonComp'
+
+
 import Image from 'next/legacy/image'
 import Link from 'next/link'
-import { useEffect, useState } from 'react'
-import 'react-loading-skeleton/dist/skeleton.css'
-export default function Home() {
-  const[data,setData]=useState([]);
-const[loader,setLoader]=useState(true);
-  const fetchData=async()=>{
-    try {
-      setLoader(true);
-const res=await fetch(`https://api.nytimes.com/svc/topstories/v2/home.json?api-key=${process.env.NEXT_PUBLIC_Api_KEY}`);
+
+export default async function Home() {
+  
+
+const res=await fetch(`https://api.nytimes.com/svc/topstories/v2/world.json?api-key=${process.env.NEXT_PUBLIC_Api_KEY}`);
 const data=await res.json();
-setData(data.results);
-setLoader(false);
-} catch (error) {
-      alert('Internet Connection Lost')
-}
-  }
-  useEffect(()=>{
-fetchData()
-  },[])
+
   return (
     
    <div className='container'>
 
-   {(loader)&&<SkeletonComp number={10}/>}
 
-{(data!=undefined)&& data.map((value,index)=>{
+{(data!=undefined)&& data.results.map((value,index)=>{
 
 return <div className="card" key={index}><Link href={value.url} target='_blank' >
 <div className="image_container">
